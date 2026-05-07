@@ -1,0 +1,9 @@
+barrufet.txt
+dip.txt
+drac.txt
+follet.txt
+gambutzi.txt
+minairo.txt
+mulassa.txt
+pesanta.txt
+simanya.txt
