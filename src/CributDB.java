@@ -26,7 +26,7 @@ public class CributDB {
 
 	public Cribut readCribut (int n) throws IOException {
 		//Ir a la posicion
-		cributDB.seek(n * Cribut.SIZE);
+		cributDB.seek((long) n * Cribut.SIZE);
 		//Crear byte "32"
 		byte[] record = new byte[Cribut.SIZE];
 		//leer bytes
@@ -49,7 +49,7 @@ public class CributDB {
 
 	public void writeCribut (int n, Cribut cb) throws IOException {
 		//Ir a la posicion
-		cributDB.seek(n * Cribut.SIZE);
+		cributDB.seek((long) n * Cribut.SIZE);
 		//Crear byte
 		byte[] record = cb.toBytes();
 		//Escribir un cribut
@@ -80,7 +80,7 @@ public class CributDB {
 		 */
 		//Restamos un cribut porque habra un registro menos
 		numCributs--;
-		cributDB.setLength(numCributs * Cribut.SIZE);
+		cributDB.setLength((long) numCributs * Cribut.SIZE);
 		return true;
 	}
 
